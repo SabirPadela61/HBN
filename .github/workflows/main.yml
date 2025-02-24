@@ -28,9 +28,9 @@ jobs:
         run: |
           $password = ConvertTo-SecureString "P@ssword!" -AsPlainText -Force
           Set-LocalUser -Name "runneradmin" -Password $password
+agent:
+	authtoken: 2tUAPkq3JiiSOxub08CgURy8KlF_5C2VzKE1ynDaMqq1NuErq
+
 
       - name: Create Tunnel
         run: .\ngrok\ngrok.exe tcp 3389
-
-agent:
-	authtoken: 2tUAPkq3JiiSOxub08CgURy8KlF_5C2VzKE1ynDaMqq1NuErq
